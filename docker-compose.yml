@@ -1,9 +1,6 @@
 services:
-  app:
+  bot:
     build: .
-    container_name: name
-    ports:
-      - "81:81"
+    container_name: bot
     restart: always
-    extra_hosts:
-      - "host.docker.internal:host-gateway"
+    network_mode: "host"
